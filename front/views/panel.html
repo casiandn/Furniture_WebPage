@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel</title>
+    <link rel="stylesheet" href="../css/panel.css">
+    <script src="../javascript/panel.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h1>Panel</h1>
+            <ul>
+                <li><a href="create">Create Product</a></li>
+                <li><a href="see">See product</a></li>
+                <li><a href="update">Update Product</a></li>
+                <li><a href="delete">Delete Product</a></li>
+            </ul>
+        </aside>
+        <main>
+            <article id="create">
+                <form onsubmit="return createPost()">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="name">
+                        <input type="text" id="category" name="category" placeholder="category">
+                        <input type="number" name="quantity" id="quantity" placeholder="quantity">
+                        <input type="text" name="dimensions" id="dimensions" placeholder="dimensions">
+                        <input type="text" name="description" id="description" placeholder="description">
+                        <input type="text" name="basePrice" id="basePrice" placeholder="basePrice">
+                        <input type="text" name="salePrice" id="salePrice" placeholder="salePrice">
+                        <select name="select">
+                            <option value="Colchones">Colchones</option>
+                            <option value="Canapes" >Canapes</option>
+                            <option value="Bases y Somieres">Bases y Somieres</option>
+                            <option value="Almohadas" >Almohadas</option>
+                            <option value="Ropa de Cama" >Ropa de Cama</option>
+                            <option value="Sanitaria" >Sanitaria</option>
+                        </select>
+                        <input type="file" name="chooseFile" accept="image/*, .pdf, .jpg" id="file" required>
+                    </div>
+                    <button>Guardar Producto</button>
+                </form>
+            </article>
+            <article id="see">
+                <h2>see</h2>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3>hola</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio, beatae exercitationem aperiam accusantium dolores enim ducimus consequatur excepturi ullam.</p>
+            </article>
+            <article id="update">
+                <h2>update</h2>
+
+            </article>
+            <article id="delete">
+                <h2>delete</h2>
+
+            </article>
+        </main>
+    </div>
+</body>
+</html>
