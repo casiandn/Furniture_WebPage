@@ -21,16 +21,15 @@
         </aside>
         <main>
             <article id="create">
-                <form onsubmit="return createPost()">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="name">
-                        <input type="text" id="category" name="category" placeholder="category">
-                        <input type="number" name="quantity" id="quantity" placeholder="quantity">
-                        <input type="text" name="dimensions" id="dimensions" placeholder="dimensions">
-                        <input type="text" name="description" id="description" placeholder="description">
-                        <input type="text" name="basePrice" id="basePrice" placeholder="basePrice">
-                        <input type="text" name="salePrice" id="salePrice" placeholder="salePrice">
-                        <select name="select">
+                <form method="POST">
+                    <div id="crt-post-cont">
+                        <input type="text" id="name" name="name" placeholder="name" required>
+                        <input type="number" name="quantity" id="quantity" placeholder="quantity" required>
+                        <input type="text" name="dimensions" id="dimensions" placeholder="dimensions" required>
+                        <input type="text" name="description" id="description" placeholder="description" required>
+                        <input type="number" name="basePrice" id="basePrice" placeholder="basePrice" required>
+                        <input type="number" name="salePrice" id="salePrice" placeholder="salePrice" required>
+                        <select name="select" required>
                             <option value="Colchones">Colchones</option>
                             <option value="Canapes" >Canapes</option>
                             <option value="Bases y Somieres">Bases y Somieres</option>
@@ -38,9 +37,9 @@
                             <option value="Ropa de Cama" >Ropa de Cama</option>
                             <option value="Sanitaria" >Sanitaria</option>
                         </select>
-                        <input type="file" name="chooseFile" accept="image/*, .pdf, .jpg" id="file" required>
+                        <input type="file" name="chooseFile" accept="image/*, .pdf, .jpg" id="file" required >
                     </div>
-                    <button>Guardar Producto</button>
+                    <button id="createFurniture">Guardar Producto</button>
                 </form>
             </article>
             <article id="see">

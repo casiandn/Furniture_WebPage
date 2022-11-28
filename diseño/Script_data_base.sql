@@ -6,7 +6,6 @@ create table Producto (
     cantidadEnStock mediumint default 100,
     categoria enum('Colchones', 'Canapes', 'Bases y Somieres', 'Almohadas', 'Ropa de Cama', 'Sanitaria') not null,
     dimensiones varchar(10) not null,
-    peso decimal(4,2) not null,
     descripcion varchar(200) not null,
     precioBase int not null,
     precioVenta int not null,
@@ -14,4 +13,5 @@ create table Producto (
     imagen varchar(100) not null
 );
 #drop table producto;
+
 #alter table Producto modify column fecha datetime default now();

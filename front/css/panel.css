@@ -60,7 +60,7 @@ main article{ /* hide all options */
 }
 #create form{
     width: 450px;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,6 +74,7 @@ main article{ /* hide all options */
     align-items: space-between
 }
 #create input, select{
+    margin-top: 10px;
     width: 200px;
     height: 50px;
     border-radius: 40px;
