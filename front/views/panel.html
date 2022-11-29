@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel</title>
     <link rel="stylesheet" href="../css/panel.css">
-    <script src="../javascript/panel.js" defer></script>
+    <script src="../javascript/createFurniture.js" defer></script>
+    <script src="../javascript/seeProducts.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -38,15 +39,21 @@
                             <option value="Sanitaria" >Sanitaria</option>
                         </select>
                         <input type="file" name="chooseFile" accept="image/*, .pdf, .jpg" id="file" required >
+                        <input type="number" name="weight" id="weight" placeholder="weight" required>
                     </div>
                     <button id="createFurniture">Guardar Producto</button>
                 </form>
             </article>
             <article id="see">
-                <h2>see</h2>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <h3>hola</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio, beatae exercitationem aperiam accusantium dolores enim ducimus consequatur excepturi ullam.</p>
+                <div id="search-by-name">
+                    <input type="text" id="getProductByName" placeholder="name" required>
+                    <button id="getProductBtn">Ver Productos</button>
+                </div>
+                <div id="getResult">
+                    <table id="getResultTable">
+
+                    </table>
+                </div>
             </article>
             <article id="update">
                 <h2>update</h2>

@@ -47,7 +47,8 @@ main{
 }
  
 main article{ /* hide all options */
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 700px;
     display: none;
     background-color: rgb(78, 199, 255);
 }
@@ -81,11 +82,48 @@ main article{ /* hide all options */
     padding: 10px;
 }
 
-#create form button{
+button{
     width: 170px;
     height: 50px;
     border-radius: 40px;
     cursor: pointer;
     background-color: rgb(0, 26, 56);
     color: #fff;
+}
+
+table, tr, th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table{
+    left: 20%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+.row{
+    height: 30px;
+    background-color: red;
+}
+
+td, th{
+    padding: 5px;
+}
+
+#search-by-name{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+    display: flex;
+    
+}
+
+#search-by-name input{
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-right: 20px;
 }

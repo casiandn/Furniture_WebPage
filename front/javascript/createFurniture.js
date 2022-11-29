@@ -29,6 +29,7 @@ function createPostObject(){
     bodyForm.append('salePrice', createPostCnt[5].value)
     bodyForm.append('category', createPostCnt[6].value)
     bodyForm.append('furnitureImage', createPostCnt[7].files[0])
+    bodyForm.append('weight', createPostCnt[8].value)
     return bodyForm;
 }
 

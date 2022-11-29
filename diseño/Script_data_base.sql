@@ -10,8 +10,7 @@ create table Producto (
     precioBase int not null,
     precioVenta int not null,
     fechaPuestaVenta datetime default now(),
-    imagen varchar(100) not null
+    imagen varchar(100) not null,
+    peso mediumint
 );
 #drop table producto;
-
-#alter table Producto modify column fecha datetime default now();
