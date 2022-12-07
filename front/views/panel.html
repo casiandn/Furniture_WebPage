@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/panel.css">
     <script src="../javascript/createFurniture.js" defer></script>
     <script src="../javascript/seeProducts.js" defer></script>
+    <script src="../javascript/updateFurniture.js" defer></script>
+    <script src="../javascript/deleteByProductID.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -21,7 +23,7 @@
             </ul>
         </aside>
         <main>
-            <article id="create">
+            <article id="create" class="form"> 
                 <form method="POST">
                     <div id="crt-post-cont">
                         <input type="text" id="name" name="name" placeholder="name" required>
@@ -50,18 +52,60 @@
                     <button id="getProductBtn">Ver Productos</button>
                 </div>
                 <div id="getResult">
-                    <table id="getResultTable">
-
+                    <table>
+                        <thead>
+                            <tr id="title-row">
+                                <th>Nombre</th>
+                                <th>categoria</th>
+                                <th>cantidadEnStock</th>
+                                <th>precioBase</th>
+                                <th>precioVenta</th>
+                                <th>FechaApariciòn</th>
+                                <th>codigoProducto</th>
+                                <th>descripcion</th>
+                                <th>dimensiones</th>
+                                <th>peso</th>
+                                <th>Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody id="getResultTable">
+                        </tbody>
                     </table>
                 </div>
             </article>
-            <article id="update">
-                <h2>update</h2>
-
+            <article id="update" class="form">
+                <form method="PUT">
+                    <div id="update-cont">
+                        <input type="text" id="name-update" name="name-update" placeholder="Product Name" required>
+                        <input type="text" id="new-name-update" name="new-name-update" placeholder="New Name">
+                        <input type="number" name="quantity-update" id="quantity-update" placeholder="quantity">
+                        <input type="text" name="dimensions-update" id="dimensions-update" placeholder="dimensions">
+                        <input type="text" name="description-update" id="description-update" placeholder="description">
+                        <input type="number" name="basePrice-update" id="basePrice-update" placeholder="basePrice">
+                        <input type="number" name="salePrice-update" id="salePrice-update" placeholder="salePrice">
+                        <select name="select" >
+                            <option value=""disabled></option>
+                            <option value="Colchones">Colchones</option>
+                            <option value="Canapes" >Canapes</option>
+                            <option value="Bases y Somieres">Bases y Somieres</option>
+                            <option value="Almohadas" >Almohadas</option>
+                            <option value="Ropa de Cama" >Ropa de Cama</option>
+                            <option value="Sanitaria" >Sanitaria</option>
+                            <option value="" selected disabled></option>
+                        </select>
+                        <input type="number" name="weight" id="weight" placeholder="weight">
+                        <input type="file" name="chooseFile" accept="image/*, .jpg" id="file">
+                    </div>
+                    <button id="UpdateFurnitureBtn">Actualizar Producto</button>
+                </form>
             </article>
             <article id="delete">
-                <h2>delete</h2>
-
+                <form action="">
+                    <div id="deleteByCode">
+                        <input type="text" id="deleteByCodeProduct" name="deleteByProductId" placeholder="Codigo Producto" required>
+                        <button id="deleteProductsBtn">Borrar Producto</button>
+                    </div>
+                </form>
             </article>
         </main>
     </div>

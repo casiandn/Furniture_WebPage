@@ -50,16 +50,18 @@ main article{ /* hide all options */
     height: 100vh;
     min-height: 700px;
     display: none;
+    overflow: hidden;
     background-color: rgb(78, 199, 255);
 }
-
-#create {
-    width: 100%;
+#create{
     display: flex;
+}
+.form {
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
-#create form{
+.form form{
     width: 450px;
     min-height: 400px;
     display: flex;
@@ -67,14 +69,14 @@ main article{ /* hide all options */
     align-items: center;
     justify-content: space-around;
 }
-#create form div{
+.form form div{
     height: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: space-between
 }
-#create input, select{
+.form input, select{
     margin-top: 10px;
     width: 200px;
     height: 50px;
@@ -82,6 +84,13 @@ main article{ /* hide all options */
     padding: 10px;
 }
 
+/*  See results */
+
+#see{
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly
+}
 button{
     width: 170px;
     height: 50px;
@@ -91,39 +100,81 @@ button{
     color: #fff;
 }
 
+/* table styles */
+
 table, tr, th,td{
     border: 1px solid black;
     border-collapse: collapse;
 }
-
 table{
-    left: 20%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 0 auto;
+    background-color:rgb(212, 212, 250);
     z-index: 999;
 }
 .row{
     height: 30px;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
 }
-
 td, th{
     padding: 5px;
 }
 
-#search-by-name{
+/*  make th fixed to top */
+
+thead tr th {
+    position: sticky;
+    top: 0;
+    background-color:rgb(212, 212, 250);
+}
+
+#getResult{
+    width: 80%;
+    overflow: auto;
+    height: 500px;
+    position: relative;
+}
+
+/* style scrollbar for table */
+
+#getResult::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    }
+    
+#getResult::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    }
+    
+#getResult::-webkit-scrollbar-thumb {
+    background:black; 
+    border-radius: 10px;
+    }
+    
+#getResult::-webkit-scrollbar-thumb:hover {
+    background:rgb(54, 56, 58); 
+}
+
+/* style search inputs */
+#search-by-name, #deleteByCode{
     width: 300px;
     margin: 0 auto;
-    margin-top: 200px;
     display: flex;
     
 }
-
-#search-by-name input{
+#search-by-name input, #deleteByCode input{
     width: 200px;
     height: 50px;
     border-radius: 40px;
     padding: 10px;
     margin-right: 20px;
+}
+
+/* delete */
+
+#delete form{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
 }

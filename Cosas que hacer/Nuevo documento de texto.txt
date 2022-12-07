@@ -1,0 +1,3 @@
+borrar imagen antigua y actualizar, comprobar que se ha actualizado en la base de datos y si no dejar la imagen anterior.
+
+comprobar excepciones para enseñar productos (he borrado el return res.status(200).json() por return >> false)

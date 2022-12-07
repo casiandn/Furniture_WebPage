@@ -1,9 +1,13 @@
-const {queryDatabase} = require('./queryGetDBD')
+const {queryDatabase, queryDatabaseWithParam} = require('./queryGetDBD')
 
 async function getFurniture(req,res){
-    let data = await queryDatabase()
-    console.log(data)
-    if(!data) return res.json("Ha habido un problema");
+    let name = req.params.name;
+    let data;
+
+    if(name) data = await queryDatabaseWithParam(name)
+    else data = await queryDatabase()
+    
+    if(!data) return res.status(500).json("No se han podido mostrar los productos. Puede que no exista este producto.");
     res.json(data);
 }
 
